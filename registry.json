@@ -211,6 +211,18 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "boutique-card",
+      "type": "registry:component",
+      "title": "Boutique Card",
+      "description": "Breitling Boutique Card Component",
+      "files": [
+        {
+          "path": "components/BoutiqueCard.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
