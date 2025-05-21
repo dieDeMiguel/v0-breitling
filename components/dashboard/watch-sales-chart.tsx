@@ -78,4 +78,4 @@ export function WatchSalesChart() {
       <canvas ref={canvasRef} width="800" height="300" className="w-full h-full"></canvas>
     </div>
   )
-} 
+}
