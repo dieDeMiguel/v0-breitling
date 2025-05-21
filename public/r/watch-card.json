@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "watch-card",
+  "type": "registry:component",
+  "title": "Watch Card",
+  "description": "Breitling Watch Card Component",
+  "dependencies": [
+    "lucide-react",
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "theme",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/watch-card.tsx",
+      "content": "import Image from \"next/image\"\nimport Link from \"next/link\"\nimport { Heart } from \"lucide-react\"\nimport { Button } from \"@/components/ui/button\"\n\ninterface WatchCardProps {\n  /**\n   * Watch data to display in the card\n   */\n  watch: {\n    id: string\n    name: string\n    image: string\n    isNew?: boolean\n    price?: string\n    model?: string\n  }\n  /**\n   * Optional className to apply to the card\n   */\n  className?: string\n}\n\n/**\n * A card component for displaying watch information\n */\nexport function WatchCard({ watch, className }: WatchCardProps) {\n  return (\n    <div className={`flex flex-col ${className}`}>\n      <div className=\"relative group\">\n        {watch.isNew && (\n          <div className=\"absolute top-0 left-0 bg-black text-white text-xs font-bold py-1 px-2 z-10\">NEW</div>\n        )}\n        <Button variant=\"ghost\" size=\"icon\" className=\"absolute top-0 right-0 z-10 rounded-full hover:bg-white/20\">\n          <Heart className=\"h-5 w-5\" />\n        </Button>\n        <Link href={`/watches/${watch.id}`}>\n          <div className=\"relative h-[200px] w-full\">\n            <Image src={watch.image || \"/placeholder.svg\"} alt={watch.name} fill className=\"object-contain\" />\n          </div>\n        </Link>\n      </div>\n      <div className=\"mt-4 text-center\">\n        {watch.model && <p className=\"text-xs text-gray-500\">{watch.model}</p>}\n        <h3 className=\"font-bold\">{watch.name}</h3>\n        {watch.price && <p className=\"mt-2\">{watch.price} CHF</p>}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "content": "import * as React from \"react\"\nimport { Slot } from \"@radix-ui/react-slot\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n        destructive:\n          \"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n        outline:\n          \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-10 px-4 py-2\",\n        sm: \"h-9 rounded-md px-3\",\n        lg: \"h-11 rounded-md px-8\",\n        icon: \"h-10 w-10\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n)\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\"\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      />\n    )\n  }\n)\nButton.displayName = \"Button\"\n\nexport { Button, buttonVariants }\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}
