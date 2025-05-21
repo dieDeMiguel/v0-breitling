@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Phone, Globe, Search, Heart, User, ShoppingBag } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import BreitlingLogo from "@/components/BreitlingLogo"
 
 interface HeaderProps {
   /**
@@ -162,13 +163,7 @@ export default function Header({
               </div>
             </div>
             <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
-              <Image
-                src="https://www.breitling.com/_next/static/images/breitling-140.svg"
-                alt="Breitling"
-                width={120}
-                height={40}
-                className="h-10"
-              />
+              <BreitlingLogo />
             </Link>
             <div className="flex items-center space-x-6">
               <Button variant="ghost" size="icon" className="rounded-full p-2 h-auto w-auto">
