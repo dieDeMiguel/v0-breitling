@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { WatchCard } from "@/components/watch-card";
 import HeaderFooter from "@/components/header-footer";
+import BoutiqueCard from "@/components/BoutiqueCard";
 
 export default function StarterKitPage() {
   // Use a state to hold the BASE_URL and set it on the client side
@@ -37,6 +38,15 @@ export default function StarterKitPage() {
     return `https://v0.dev/chat/api/open?title=${encodedTitle}&prompt=${encodedPrompt}&url=${encodedUrl}`;
   };
 
+  const boutique = {
+    id: "geneva",
+    name: "BREITLING BOUTIQUE GENEVA",
+    image:
+      "https://www.breitling.com/api/image-proxy/a.mktgcdn.com/p/FAmR6aX4omChh6ewjSrSYf3qK49GIea6QVf1KseP8Tg/1280x755.jpg",
+    address: "PLACE DES BERGUES 1 GENEVA",
+    phone: "+41227381600",
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto py-12 px-4">
@@ -45,22 +55,21 @@ export default function StarterKitPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">Breitling UI Component Library</h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">A collection of reusable UI components and templates for building Breitling-like applications.</p>
           </div>
-
           <section className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
             <div className="flex items-start justify-between p-2">
               <span className="flex flex-col">
                 <h3 className="text-xl font-medium text-black">
-                  Breitling Header and Footer
+                  Breitling Boutique Card
                 </h3>
-                <p className="text-gray-700">A layout component with Breitling header and footer.</p>
+                <p className="text-gray-700">A card component showcasing a Breitling boutique.</p>
               </span>
 
               {baseUrl && (
-                <a 
+                <Link 
                   href={createV0Link(
-                    "Breitling Header and Footer", 
-                    "A layout component with Breitling header and footer.", 
-                    "header-footer"
+                    "Breitling Boutique Card", 
+                    "A card component showcasing a Breitling boutique.", 
+                    "boutique-card"
                   )}
                   className="flex-shrink-0"
                   target="_blank"
@@ -71,14 +80,45 @@ export default function StarterKitPage() {
                     width="99"
                     height="32"
                   />
-                </a>
+                </Link>
               )}
             </div>
-            <div className="h-[1200px] w-full rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4">
+            <div className="h-[505px] w-[350px] rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4 mx-auto">
+              <BoutiqueCard boutique={boutique} />
+            </div>
+          </section>
+          <section className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div className="flex items-start justify-between p-2">
+              <span className="flex flex-col">
+                <h3 className="text-xl font-medium text-black">
+                  Breitling Header and Footer
+                </h3>
+                <p className="text-gray-700">A layout component with Breitling header and footer.</p>
+              </span>
+
+              {baseUrl && (
+                <Link 
+                  href={createV0Link(
+                    "Breitling Header and Footer", 
+                    "A layout component with Breitling header and footer.", 
+                    "header-footer"
+                  )}
+                  className="flex-shrink-0"
+                  target="_blank"
+                >
+                  <Image
+                    src="https://v0.dev/chat-static/button.svg"
+                    alt="Open in v0"
+                    width="99"
+                    height="32"
+                  />
+                </Link>
+              )}
+            </div>
+            <div className="h-[950px] w-full rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4">
               <HeaderFooter />
             </div>
           </section>
-
         </div>
       </div>
     </div>
