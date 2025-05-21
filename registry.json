@@ -149,6 +149,44 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "dashboard",
+      "type": "registry:block",
+      "title": "Breitling Dashboard",
+      "description": "A comprehensive admin dashboard for Breitling with analytics, orders, and product management",
+      "registryDependencies": ["theme", "button", "card"],
+      "files": [
+        {
+          "path": "app/dashboard/page.tsx",
+          "type": "registry:page",
+          "target": "app/dashboard/page.tsx"
+        },
+        {
+          "path": "components/dashboard/header.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/dashboard/sidebar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/dashboard/stats-cards.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/dashboard/watch-sales-chart.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/dashboard/top-selling-watches.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/dashboard/recent-orders.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
