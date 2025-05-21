@@ -1,0 +1,154 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "name": "Breitling Design System",
+  "homepage": "https://breitling.com",
+  "items": [
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "Breitling Theme",
+      "description": "A base theme with Breitling design system colors and font installed",
+      "files": [
+        {
+          "path": "tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "app/layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:file",
+          "target": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "type": "registry:block",
+      "title": "Home Page",
+      "description": "Breitling Home Page with Hero Section, Category Section, and more",
+      "files": [
+        {
+          "path": "app/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
+        },
+        {
+          "path": "components/hero-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/category-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/promotional-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/latest-additions-carousel.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/strap-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/boutique-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/e-boutique-services.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "type": "registry:component",
+      "title": "Breitling Header",
+      "description": "Breitling Header with navigation and dropdown menus",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "components/header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "type": "registry:component",
+      "title": "Breitling Footer",
+      "description": "Breitling Footer with links and social media",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "components/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Breitling Button Component",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Breitling Card Component",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "components/ui/card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Breitling Dropdown Menu Component",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "components/ui/dropdown-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "watch-card",
+      "type": "registry:component",
+      "title": "Watch Card",
+      "description": "Breitling Watch Card Component",
+      "registryDependencies": ["theme", "button"],
+      "files": [
+        {
+          "path": "components/watch-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
