@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breitling-logo",
+  "type": "registry:component",
+  "title": "Breitling Logo",
+  "description": "Breitling Logo Component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "components/BreitlingLogo.tsx",
+      "content": "import Image from \"next/image\";\n\nexport default function BreitlingLogo() {\n  return (\n    <Image\n      src=\"https://www.breitling.com/_next/static/images/breitling-140.svg\"\n      alt=\"Breitling\"\n      width={250}\n      height={60}\n      className=\"h-14\"\n    />\n  );\n} ",
+      "type": "registry:component"
+    }
+  ]
+}

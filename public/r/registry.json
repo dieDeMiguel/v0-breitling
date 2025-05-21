@@ -199,6 +199,18 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "breitling-logo",
+      "type": "registry:component",
+      "title": "Breitling Logo",
+      "description": "Breitling Logo Component",
+      "files": [
+        {
+          "path": "components/BreitlingLogo.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
