@@ -22,7 +22,7 @@ export default function BoutiqueCard({ boutique = {
   phone: "+41227381600",
 } }: BoutiqueCardProps) {
   return (
-    <div key={boutique?.id} className="bg-white border border-gray-100 shadow-sm flex flex-col">
+    <div key={boutique?.id} className="bg-white border border-gray-100 shadow-sm flex flex-col max-w-[350px] max-h-[500px]">
       <div className="relative h-[245px] w-full mb-4">
         <Image src={boutique?.image || "/placeholder.svg"} alt={boutique?.name || "Boutique"} fill className="object-cover" />
       </div>
