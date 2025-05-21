@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && shadcn build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "registry:build": "shadcn registry:build --verbose"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -53,6 +54,7 @@
     "react-hook-form": "^7.54.1",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.0",
+    "shadcn": "2.6.0-canary.2",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",

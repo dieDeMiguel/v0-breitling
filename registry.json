@@ -187,6 +187,18 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "header-footer",
+      "type": "registry:block",
+      "title": "Header and Footer",
+      "description": "Breitling Header and Footer layout component",
+      "files": [
+        {
+          "path": "components/header-footer.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
