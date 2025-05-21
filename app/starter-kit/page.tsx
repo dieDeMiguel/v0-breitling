@@ -83,7 +83,7 @@ export default function StarterKitPage() {
                 </Link>
               )}
             </div>
-            <div className="h-[505px] w-[350px] rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4 mx-auto">
+            <div className="h-[500px] w-[350px] rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4 mx-auto">
               <BoutiqueCard />
             </div>
           </section>
