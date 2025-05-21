@@ -28,6 +28,15 @@ export default function StarterKitPage() {
     model: "AB0118"
   };
 
+  // Function to create properly encoded v0 URLs
+  const createV0Link = (title: string, prompt: string, registryItem: string) => {
+    const encodedUrl = encodeURIComponent(`${baseUrl}/r/${registryItem}.json`);
+    const encodedPrompt = encodeURIComponent(prompt);
+    const encodedTitle = encodeURIComponent(title);
+    
+    return `https://v0.dev/chat/api/open?title=${encodedTitle}&prompt=${encodedPrompt}&url=${encodedUrl}`;
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto py-12 px-4">
@@ -41,28 +50,31 @@ export default function StarterKitPage() {
             <div className="flex items-start justify-between p-2">
               <span className="flex flex-col">
                 <h3 className="text-xl font-medium text-black">
-                  Breitling Watch Card
-                </h3>
-                <p className="text-gray-700">A sleek watch card component for displaying Breitling watches.</p>
-              </span>
-            </div>
-            <div className="p-6 bg-white rounded-md border border-gray-200 mt-4">
-              <div className="max-w-xs mx-auto">
-                <WatchCard watch={sampleWatch} />
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
-            <div className="flex items-start justify-between p-2">
-              <span className="flex flex-col">
-                <h3 className="text-xl font-medium text-black">
                   Breitling Header and Footer
                 </h3>
                 <p className="text-gray-700">A layout component with Breitling header and footer.</p>
               </span>
+
+              {baseUrl && (
+                <a 
+                  href={createV0Link(
+                    "Breitling Header and Footer", 
+                    "A layout component with Breitling header and footer.", 
+                    "header-footer"
+                  )}
+                  className="flex-shrink-0"
+                  target="_blank"
+                >
+                  <img
+                    src="https://v0.dev/chat-static/button.svg"
+                    alt="Open in v0"
+                    width="99"
+                    height="32"
+                  />
+                </a>
+              )}
             </div>
-            <div className="h-[500px] w-full rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4">
+            <div className="h-[1200px] w-full rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4">
               <HeaderFooter />
             </div>
           </section>

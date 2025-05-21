@@ -29,9 +29,9 @@ export default function Footer({
 }: FooterProps) {
   return (
     <footer className="bg-[#0a0a14] text-white">
-      <div className="container mx-auto py-12 px-4">
-        <div className="flex flex-col md:flex-row justify-between mb-8">
-          <div className="mb-8 md:mb-0">
+      <div className="container mx-auto py-8 px-4">
+        <div className="flex flex-col md:flex-row justify-between mb-6">
+          <div className="mb-6 md:mb-0">
             <Link href="/newsletter" className="flex items-center text-[#FFCC33] font-bold mb-4">
               SUBSCRIBE TO OUR NEWSLETTER
               <svg
@@ -49,7 +49,7 @@ export default function Footer({
                 />
               </svg>
             </Link>
-            <div className="flex items-center text-[#FFCC33] mb-2">
+            <div className="flex flex-col md:flex-row items-center text-[#FFCC33] mb-2">
               <Link href={`tel:${phoneNumber.replace(/\s/g, "")}`} className="mr-4">
                 {phoneNumber}
               </Link>
@@ -61,10 +61,10 @@ export default function Footer({
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 border-t border-b border-gray-800">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-6 border-t border-b border-gray-800">
           <div>
-            <h3 className="font-bold mb-4">CUSTOMER SERVICE</h3>
-            <ul className="space-y-2">
+            <h3 className="font-bold mb-3">CUSTOMER SERVICE</h3>
+            <ul className="space-y-1">
               <li>
                 <Link href="/faq" className="text-gray-400 hover:text-white">
                   FAQ
@@ -98,8 +98,8 @@ export default function Footer({
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-4">WATCHES</h3>
-            <ul className="space-y-2">
+            <h3 className="font-bold mb-3">WATCHES</h3>
+            <ul className="space-y-1">
               <li>
                 <Link href="/watches/womens" className="text-gray-400 hover:text-white">
                   Women's watches
@@ -133,8 +133,8 @@ export default function Footer({
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-4">ABOUT</h3>
-            <ul className="space-y-2">
+            <h3 className="font-bold mb-3">ABOUT</h3>
+            <ul className="space-y-1">
               <li>
                 <Link href="/about/books" className="text-gray-400 hover:text-white">
                   Breitling Books
@@ -163,8 +163,8 @@ export default function Footer({
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-4">SOCIAL NETWORK</h3>
-            <div className="grid grid-cols-4 gap-4 mb-8">
+            <h3 className="font-bold mb-3">SOCIAL NETWORK</h3>
+            <div className="grid grid-cols-4 gap-3 mb-6">
               <Link href="#" className="hover:text-[#FFCC33]">
                 <Instagram className="h-6 w-6" strokeWidth={1} />
               </Link>
@@ -179,9 +179,9 @@ export default function Footer({
               </Link>
             </div>
             <h3 className="font-bold mb-4">COUNTRY/REGION</h3>
-            <Button className="border border-white bg-transparent hover:bg-white/10 w-full justify-start">
-              <Globe className="h-5 w-5 mr-2" strokeWidth={1} />
-              SWITZERLAND - ENGLISH
+            <Button className="border border-white bg-transparent hover:bg-white/10 w-full justify-center text-white text-xs sm:text-sm md:w-3/4 lg:w-1/2 rounded-md overflow-hidden min-w-[150px]">
+              <Globe className="h-5 w-5 mr-2 flex-shrink-0" strokeWidth={1} />
+              <span className="whitespace-nowrap overflow-hidden text-ellipsis">SWITZERLAND - ENGLISH</span>
             </Button>
           </div>
         </div>
