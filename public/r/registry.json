@@ -197,6 +197,16 @@
         {
           "path": "components/header-footer.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
         }
       ]
     },
@@ -209,6 +219,16 @@
         {
           "path": "components/BreitlingLogo.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
         }
       ]
     },
@@ -221,6 +241,16 @@
         {
           "path": "components/BoutiqueCard.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
         }
       ]
     }
