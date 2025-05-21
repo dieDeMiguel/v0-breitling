@@ -84,7 +84,7 @@ export default function StarterKitPage() {
               )}
             </div>
             <div className="h-[505px] w-[350px] rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4 mx-auto">
-              <BoutiqueCard boutique={boutique} />
+              <BoutiqueCard />
             </div>
           </section>
           <section className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
