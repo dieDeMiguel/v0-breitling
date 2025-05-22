@@ -1,32 +1,9 @@
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { HeroSection } from "@/components/hero-section"
-import { CategorySection } from "@/components/category-section"
-import { PromotionalSection } from "@/components/promotional-section"
-import { LatestAdditionsCarousel } from "@/components/latest-additions-carousel"
-import { StrapSection } from "@/components/strap-section"
-import { BoutiqueSection } from "@/components/boutique-section"
-import { EBoutiqueServices } from "@/components/e-boutique-services"
+import BoutiqueCard from "../components/BoutiqueCard"
 
-/**
- * Home page component for the Breitling website
- */
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1">
-        <div className="flex flex-col">
-          <HeroSection />
-          <CategorySection />
-          <PromotionalSection />
-          <LatestAdditionsCarousel />
-          <StrapSection />
-          <BoutiqueSection />
-          <EBoutiqueServices />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <BoutiqueCard />
+    </main>
   )
 }

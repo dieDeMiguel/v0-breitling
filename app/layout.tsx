@@ -1,21 +1,10 @@
-import type React from "react"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import type { Metadata } from "next"
-import { copperplate } from './fonts/fonts'
-import { Lato } from 'next/font/google'
-
-const lato = Lato({
-  subsets: ['latin'],
-  weight: ['400', '700'], // choose the weights you want
-  variable: '--font-lato', // optional: for CSS variable usage
-  display: 'swap',
-})
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Breitling | Swiss Luxury Watches",
-  description: "Breitling is a Swiss luxury watchmaker, known for precision-made chronometers designed for aviators.",
-  generator: "v0.dev",
+  title: 'v0 App',
+  description: 'Created with v0',
+  generator: 'v0.dev',
 }
 
 export default function RootLayout({
@@ -25,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${copperplate.className} ${lato.className}`}>
-        <ThemeProvider attribute="class" defaultTheme="light">
-          {children}
-        </ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
