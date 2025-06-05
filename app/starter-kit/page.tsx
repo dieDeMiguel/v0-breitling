@@ -33,40 +33,6 @@ export default function StarterKitPage() {
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">A collection of reusable UI components and templates for building Breitling-like applications.</p>
           </div>
 
-          // TODO: Add a section for the Breitling Boutique Card
-          <section className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
-            <div className="flex items-start justify-between p-2">
-              <span className="flex flex-col">
-                <h3 className="text-xl font-medium text-black">
-                  Breitling Boutique Card
-                </h3>
-                <p className="text-gray-700">A card component for displaying Breitling boutique information.</p>
-              </span>
-              
-              {baseUrl && (
-                <a 
-                  href={createV0Link(
-                    "Breitling Boutique Card",
-                    "A card component for displaying Breitling boutique information.",
-                    "boutique-card"
-                  )}
-                  className="flex-shrink-0"
-                  target="_blank"
-                >
-                  <img
-                    src="https://v0.dev/chat-static/button.svg"
-                    alt="Open in v0"
-                    width="99"
-                    height="32"
-                  />
-                </a>
-              )}
-            </div>
-            <div className="h-[520px] w-full flex justify-center items-center rounded-md border border-gray-200 overflow-hidden shadow-sm mt-4">
-              <BoutiqueCard />
-            </div>
-          </section>
-
           <section className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
             <div className="flex items-start justify-between p-2">
               <span className="flex flex-col">
