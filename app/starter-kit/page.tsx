@@ -1,10 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { WatchCard } from "@/components/watch-card";
 import HeaderFooter from "@/components/header-footer";
 
 export default function StarterKitPage() {
@@ -17,16 +13,6 @@ export default function StarterKitPage() {
       (typeof window !== 'undefined' ? window.location.origin : "");
     setBaseUrl(url);
   }, []);
-
-  // Sample watch data for demonstration
-  const sampleWatch = {
-    id: "premier-b01-chronograph-42",
-    name: "Premier B01 Chronograph 42",
-    image: "/images/watches/premier-b01-chronograph-42.png",
-    isNew: true,
-    price: "8,300",
-    model: "AB0118"
-  };
 
   // Function to create properly encoded v0 URLs
   const createV0Link = (title: string, prompt: string, registryItem: string) => {
