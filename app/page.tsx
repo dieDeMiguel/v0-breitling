@@ -1,4 +1,4 @@
-import BoutiqueCard from "../components/BoutiqueCard"
+import BoutiqueCard from "../components/boutique-card"
 
 export default function Page() {
   return (

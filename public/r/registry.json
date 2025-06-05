@@ -73,6 +73,19 @@
       ]
     },
     {
+      "name": "boutique-card",
+      "type": "registry:component",
+      "title": "Boutique Card",
+      "description": "Breitling Boutique Card Component",
+      "registryDependencies": ["theme", "button"],
+      "files": [
+        {
+          "path": "components/boutique-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "header",
       "type": "registry:component",
       "title": "Breitling Header",

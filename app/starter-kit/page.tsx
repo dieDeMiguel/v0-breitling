@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import HeaderFooter from "@/components/header-footer";
-import BoutiqueCard from "@/components/BoutiqueCard";
+import BoutiqueCard from "@/components/boutique-card";
 
 export default function StarterKitPage() {
   // Use a state to hold the BASE_URL and set it on the client side

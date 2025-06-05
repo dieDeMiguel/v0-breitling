@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "app/page.tsx",
-      "content": "import BoutiqueCard from \"../components/BoutiqueCard\"\n\nexport default function Page() {\n  return (\n    <main className=\"flex min-h-screen flex-col items-center justify-center p-24\">\n      <BoutiqueCard />\n    </main>\n  )\n}\n",
+      "content": "import BoutiqueCard from \"../components/boutique-card\"\n\nexport default function Page() {\n  return (\n    <main className=\"flex min-h-screen flex-col items-center justify-center p-24\">\n      <BoutiqueCard />\n    </main>\n  )\n}\n",
       "type": "registry:page",
       "target": "app/page.tsx"
     },
